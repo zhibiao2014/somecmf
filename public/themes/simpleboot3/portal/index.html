@@ -1,189 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>首页 {$site_info.site_name|default=''}</title>
-    <meta name="keywords" content="{$site_info.site_seo_keywords|default=''}"/>
-    <meta name="description" content="{$site_info.site_seo_description|default=''}">
-    <include file="public@head"/>
-    <link href="__TMPL__/public/assets/css/slippry/slippry.css" rel="stylesheet">
-    <style>
-        .caption-wraper {
-            position: absolute;
-            left: 50%;
-            bottom: 2em;
-        }
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        .caption-wraper .caption {
-            position: relative;
-            left: -50%;
-            background-color: rgba(0, 0, 0, 0.54);
-            padding: 0.4em 1em;
-            color: #fff;
-            -webkit-border-radius: 1.2em;
-            -moz-border-radius: 1.2em;
-            -ms-border-radius: 1.2em;
-            -o-border-radius: 1.2em;
-            border-radius: 1.2em;
-        }
+        <title>{$site_info.site_name|default=''}</title>
 
-        .tc-gridbox {
-            margin: 0;
-        }
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        @media (max-width: 767px) {
-            .sy-box {
-                margin: 12px -20px 0 -20px;
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
             }
 
-            .caption-wraper {
-                left: 0;
-                bottom: 0.4em;
+            .full-height {
+                height: 100vh;
             }
 
-            .caption-wraper .caption {
-                left: 0;
-                padding: 0.2em 0.4em;
-                font-size: 0.92em;
-                -webkit-border-radius: 0;
-                -moz-border-radius: 0;
-                -ms-border-radius: 0;
-                -o-border-radius: 0;
-                border-radius: 0;
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
             }
-        }
 
-    </style>
-    <hook name="before_head_end"/>
-</head>
-<body class="body-white">
-<include file="public@nav"/>
+            .position-ref {
+                position: relative;
+            }
 
-<ul id="home-slider" class="list-unstyled">
-    <php>
-        $top_slide_id=empty($theme_vars['top_slide'])?1:$theme_vars['top_slide'];
-    </php>
-    <slides id="$top_slide_id">
-        <li>
-            <div class="caption-wraper">
-                <div class="caption">{$vo.title|default=''}</div>
-            </div>
-            <a href="{$vo.url|default=''}"><img src="{:cmf_get_image_url($vo.image)}" alt=""></a>
-        </li>
-    </slides>
-    <noslides id="$top_slide_id">
-        <li>
-            <div class="caption-wraper">
-                <div class="caption">此幻灯片只是演示,您没有设置任何幻灯片,请到后台模板设置！</div>
-            </div>
-            <a href=""><img src="__TMPL__/public/assets/images/demo/1.jpg" alt=""></a>
-        </li>
-        <li>
-            <div class="caption-wraper">
-                <div class="caption">此幻灯片只是演示,您没有设置任何幻灯片,请到后台模板设置！</div>
-            </div>
-            <a href=""><img src="__TMPL__/public/assets/images/demo/2.jpg" alt=""></a>
-        </li>
-        <li>
-            <div class="caption-wraper">
-                <div class="caption">此幻灯片只是演示,您没有设置任何幻灯片,请到后台模板设置！</div>
-            </div>
-            <a href=""><img src="__TMPL__/public/assets/images/demo/3.jpg" alt=""></a>
-        </li>
-    </noslides>
-</ul>
+            .top-right {
+                position: absolute;
+                right: 10px;
+                top: 18px;
+            }
 
-<div class="container">
-    <widget name="features">
-        <div>
-            <h1 class="text-center">{$widget.title}</h1>
-            <h3 class="text-center">{$widget.vars.sub_title}</h3>
-        </div>
-        <php>
-            $features_count = count($widget['vars']['features']);
-            $rows = ceil($features_count/3);
-        </php>
-        <for start="1" end="$rows" comparison="elt" step="1" name="row">
-            <php>
-                $first_row = ($row-1)*3;
-                $features = array_slice($widget['vars']['features'],$first_row,3);
-            </php>
-            <div class="row">
-                <foreach name="features" item="vo">
-                    <div class="col-md-4">
-                        <h2 class="font-large nospace"><i class="fa fa-{$vo.icon}"></i> {$vo.title}</h2>
-                        <p>{$vo.content}</p>
-                    </div>
-                </foreach>
-            </div>
-        </for>
+            .content {
+                text-align: center;
+            }
 
-    </widget>
+            .title {
+                font-size: 84px;
+            }
 
-    <widget name="last_news">
-        <div>
-            <h1 class="text-center">{$widget.title}</h1>
-        </div>
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
 
-        <div class="row">
-            <?php  $widget["vars"]["last_news_category_id"] = empty($widget["vars"]["last_news_category_id"])?1:$widget["vars"]["last_news_category_id"];?>
-            <portal:articles limit="4" order="post.published_time DESC"
-                             categoryIds="$widget.vars.last_news_category_id">
-                <div class="col-md-3">
-                    <div class="tc-gridbox">
-                        <div class="header">
-                            <div class="item-image">
-                                <a href="{:cmf_url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">
-                                    <present name="vo.more.thumbnail">
-                                        <empty name="vo.more.thumbnail">
-                                            <img src="__TMPL__/public/assets/images/default-thumbnail.png"
-                                                 class="img-responsive"
-                                                 alt="">
-                                            <else/>
-                                            <img src="{:cmf_get_image_url($vo.more.thumbnail)}"
-                                                 class="img-responsive"
-                                                 alt="">
-                                        </empty>
-                                        <else/>
-                                        <img src="__TMPL__/public/assets/images/default-thumbnail.png"
-                                             class="img-responsive"
-                                             alt="">
-                                    </present>
-                                </a>
-                            </div>
-                            <h3>
-                                <a href="{:cmf_url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">{$vo.post_title}</a>
-                            </h3>
-                            <hr>
-                        </div>
-                        <div class="body">
-                            <p>
-                                <a href="{:cmf_url('portal/Article/index',array('id'=>$vo.id,'cid'=>$vo.category_id))}">...</a>
-                            </p>
-                        </div>
-                    </div>
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="content">
+                <div class="title m-b-md">
+                   	 {$site_info.site_name|default=''}
                 </div>
-            </portal:articles>
+            </div>
         </div>
-    </widget>
-    <include file="public@footer"/>
-</div>
-<!-- /container -->
-<include file="public@scripts"/>
-<script src="__TMPL__/public/assets/js/slippry.min.js"></script>
-<script>
-    $(function () {
-        $("#home-slider").slippry({
-            transition: 'fade',
-            useCSS: true,
-            captions: false,
-            speed: 1000,
-            pause: 3000,
-            auto: true,
-            preload: 'visible'
-        });
-        $("#home-slider").show();
-    });
-</script>
-<hook name="before_body_end"/>
-</body>
+    </body>
 </html>

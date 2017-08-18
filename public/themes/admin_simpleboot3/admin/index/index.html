@@ -5,7 +5,7 @@
     <!-- Set render engine for 360 browser -->
     <meta name="renderer" content="webkit">
     <meta charset="utf-8">
-    <title>ThinkCMF {:lang('ADMIN_CENTER')}</title>
+    <title>{$site_info.site_name|default=''} {:lang('ADMIN_CENTER')}</title>
 
     <meta name="description" content="This is page-header (.page-header &gt; h1)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -158,14 +158,14 @@
 <body style="min-width:900px;overflow: hidden;">
 <div id="loading"><i class="loadingicon"></i><span>{:lang('LOADING')}</span></div>
 <div id="right-tools-wrapper">
-    <!--<span id="right_tools_clearcache" title="清除缓存" onclick="javascript:openapp('{:url('admin/Setting/clearcache')}','right_tool_clearcache','清除缓存');"><i class="fa fa-trash-o right_tool_icon"></i></span>-->
+    <!-- <span id="right_tools_clearcache" title="清除缓存" onclick="javascript:openapp('{:url('admin/Setting/clearcache')}','right_tool_clearcache','清除缓存');"><i class="fa fa-trash-o right_tool_icon"></i></span>
     <span id="refresh-wrapper" title="{:lang('REFRESH_CURRENT_PAGE')}"><i
-            class="fa fa-refresh right_tool_icon"></i></span>
+            class="fa fa-refresh right_tool_icon"></i></span> -->
 </div>
 <div class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a href="{:url('admin/index/index')}" class="navbar-brand" style="min-width: 200px;text-align: center;">ThinkCMF</a>
+            <a href="{:url('admin/index/index')}" class="navbar-brand" style="min-width: 200px;text-align: center;">一品艺活</a>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
