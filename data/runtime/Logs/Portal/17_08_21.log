@@ -27,3 +27,884 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001037s ]
 
+[ 2017-08-21T22:03:24+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Api&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000970s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000447s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001127s ]
+NOTIC: [2] Missing argument 1 for sp_sql_posts_paged(), called in /Users/zhibiao/www/ypyh/application/Portal/Controller/ApiController.class.php on line 13 and defined /Users/zhibiao/www/ypyh/application/Portal/Common/function.php 第 95 行.
+NOTIC: [8] Undefined variable: tag /Users/zhibiao/www/ypyh/application/Portal/Common/function.php 第 96 行.
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0100s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_term_relationships term_relationships INNER JOIN ypyh_posts as posts on term_relationships.object_id = posts.id INNER JOIN ypyh_users as users on posts.post_author = users.id  WHERE term_relationships.status = 1 AND posts.post_status = 1 LIMIT 1   [ RunTime:0.0081s ]
+SQL: SELECT * FROM ypyh_term_relationships term_relationships INNER JOIN ypyh_posts as posts on term_relationships.object_id = posts.id INNER JOIN ypyh_users as users on posts.post_author = users.id  WHERE term_relationships.status = 1 AND posts.post_status = 1 ORDER BY post_date DESC LIMIT 0,20   [ RunTime:0.0210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000832s ]
+
+[ 2017-08-21T22:18:52+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPost&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000739s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000473s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000445s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.6244s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.3440s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.6608s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0077s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) LIMIT 1   [ RunTime:0.0208s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.3353s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:1.5835s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:6.8438s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0136s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017933s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001265s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000712s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000792s ]
+
+[ 2017-08-21T22:18:57+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminTerm&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000699s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000989s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000886s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001832s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000522s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000575s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0093s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010158s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000164s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000143s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2017-08-21T22:19:01+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPage&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000705s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000940s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000357s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000804s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0210s ]
+NOTIC: D方法实例化没找到模型类Common\Model\PostsModel
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND `post_type` = 2 LIMIT 1   [ RunTime:0.0127s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND `post_type` = 2 ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.0096s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0076s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0098s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009495s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000323s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000349s ]
+
+[ 2017-08-21T22:19:03+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPage&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000912s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000615s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000749s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001764s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000705s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0121s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0100s ]
+NOTIC: D方法实例化没找到模型类Common\Model\PostsModel
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0097s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0091s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0077s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007474s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000690s ]
+
+[ 2017-08-21T22:19:18+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPost&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000935s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000961s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001942s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.001393s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.001609s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0237s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0215s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0089s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0118s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) LIMIT 1   [ RunTime:0.0081s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.0095s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0088s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0113s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000099s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000170s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000526s ]
+
+[ 2017-08-21T22:19:21+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPage&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001217s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001683s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001406s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002553s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000408s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0089s ]
+NOTIC: D方法实例化没找到模型类Common\Model\PostsModel
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0114s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND `post_type` = 2 LIMIT 1   [ RunTime:0.0087s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND `post_type` = 2 ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.0112s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0103s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0083s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010951s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000393s ]
+
+[ 2017-08-21T22:19:31+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminTerm&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000708s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000940s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000899s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002023s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000725s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000797s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.5014s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.3057s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:5.1477s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0248s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000101s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000325s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000352s ]
+
+[ 2017-08-21T22:19:31+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPost&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001234s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000427s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.001008s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.001100s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0081s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) LIMIT 1   [ RunTime:0.0078s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.0146s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0188s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0193s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0079s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000346s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000378s ]
+
+[ 2017-08-21T22:19:31+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPost&a=add&term=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000579s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001283s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000438s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0219s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0101s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0098s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0119s ]
+SQL: SELECT * FROM `ypyh_terms` WHERE `term_id` = 0 LIMIT 1   [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0094s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0091s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013906s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000175s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2017-08-21T22:19:32+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPost&a=add&term=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001038s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000439s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001122s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000420s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000468s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0142s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0137s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0271s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0081s ]
+SQL: SELECT * FROM `ypyh_terms` WHERE `term_id` = 0 LIMIT 1   [ RunTime:0.0081s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0085s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0164s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013524s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-08-21T22:19:42+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPage&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001270s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001821s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000453s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000665s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001408s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000523s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000646s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0111s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0127s ]
+NOTIC: D方法实例化没找到模型类Common\Model\PostsModel
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0096s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND `post_type` = 2 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND `post_type` = 2 ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.0232s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0193s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0124s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2017-08-21T22:19:44+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPage&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000907s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000885s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001577s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000442s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0119s ]
+NOTIC: D方法实例化没找到模型类Common\Model\PostsModel
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0159s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0098s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000102s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007306s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000110s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000575s ]
+
+[ 2017-08-21T22:20:13+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPage&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000704s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000937s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000591s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001499s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.001035s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.001138s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.3291s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.3502s ]
+NOTIC: D方法实例化没找到模型类Common\Model\PostsModel
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0082s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND `post_type` = 2 LIMIT 1   [ RunTime:0.6879s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND `post_type` = 2 ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:1.9844s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0076s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0084s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017079s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000225s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000728s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000785s ]
+
+[ 2017-08-21T22:20:13+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPage&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000813s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000383s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000902s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000790s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0096s ]
+NOTIC: D方法实例化没找到模型类Common\Model\PostsModel
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0115s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND `post_type` = 2 LIMIT 1   [ RunTime:0.0089s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND `post_type` = 2 ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.0091s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0179s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0095s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000116s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2017-08-21T22:20:13+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPage&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000807s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000369s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000813s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000527s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0105s ]
+NOTIC: D方法实例化没找到模型类Common\Model\PostsModel
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0092s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND `post_type` = 2 LIMIT 1   [ RunTime:0.0077s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND `post_type` = 2 ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0105s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0124s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011881s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011941s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2017-08-21T22:20:18+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPage&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001168s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000361s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000677s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.6245s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.9490s ]
+NOTIC: D方法实例化没找到模型类Common\Model\PostsModel
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND `post_type` = 2 LIMIT 1   [ RunTime:0.2201s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND `post_type` = 2 ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.3277s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.2317s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.2355s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000468s ]
+
+[ 2017-08-21T22:23:07+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Api&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000759s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000328s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+NOTIC: [2] Missing argument 1 for sp_sql_posts_paged(), called in /Users/zhibiao/www/ypyh/application/Portal/Controller/ApiController.class.php on line 13 and defined /Users/zhibiao/www/ypyh/application/Portal/Common/function.php 第 95 行.
+NOTIC: [8] Undefined variable: tag /Users/zhibiao/www/ypyh/application/Portal/Common/function.php 第 96 行.
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:1.5036s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_term_relationships term_relationships INNER JOIN ypyh_posts as posts on term_relationships.object_id = posts.id INNER JOIN ypyh_users as users on posts.post_author = users.id  WHERE term_relationships.status = 1 AND posts.post_status = 1 LIMIT 1   [ RunTime:0.2474s ]
+SQL: SELECT * FROM ypyh_term_relationships term_relationships INNER JOIN ypyh_posts as posts on term_relationships.object_id = posts.id INNER JOIN ypyh_users as users on posts.post_author = users.id  WHERE term_relationships.status = 1 AND posts.post_status = 1 ORDER BY post_date DESC LIMIT 0,20   [ RunTime:0.9165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000814s ]
+
+[ 2017-08-21T22:23:08+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Api&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000936s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000410s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+NOTIC: [2] Missing argument 1 for sp_sql_posts_paged(), called in /Users/zhibiao/www/ypyh/application/Portal/Controller/ApiController.class.php on line 13 and defined /Users/zhibiao/www/ypyh/application/Portal/Common/function.php 第 95 行.
+NOTIC: [8] Undefined variable: tag /Users/zhibiao/www/ypyh/application/Portal/Common/function.php 第 96 行.
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0116s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_term_relationships term_relationships INNER JOIN ypyh_posts as posts on term_relationships.object_id = posts.id INNER JOIN ypyh_users as users on posts.post_author = users.id  WHERE term_relationships.status = 1 AND posts.post_status = 1 LIMIT 1   [ RunTime:0.0091s ]
+SQL: SELECT * FROM ypyh_term_relationships term_relationships INNER JOIN ypyh_posts as posts on term_relationships.object_id = posts.id INNER JOIN ypyh_users as users on posts.post_author = users.id  WHERE term_relationships.status = 1 AND posts.post_status = 1 ORDER BY post_date DESC LIMIT 0,20   [ RunTime:0.0219s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000924s ]
+
+[ 2017-08-21T22:23:20+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPost&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000087s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001585s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000578s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001477s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000437s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:3.4392s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.7109s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0079s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) LIMIT 1   [ RunTime:0.0064s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.3458s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.2356s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:1.5979s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0063s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015180s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015249s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000496s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2017-08-21T22:23:25+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPost&a=add&term=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000736s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000469s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000116s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001057s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000385s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.6223s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.3296s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0093s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ypyh_terms` WHERE `term_id` = 0 LIMIT 1   [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0058s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012531s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000457s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2017-08-21T22:24:20+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPost&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001475s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001181s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000682s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002234s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.002280s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.002409s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0087s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0082s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0098s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) LIMIT 1   [ RunTime:0.0074s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.0083s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0076s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0089s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0091s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013974s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000217s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000668s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2017-08-21T22:24:22+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPost&a=add&term=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000822s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000311s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000451s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000993s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000522s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0106s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0282s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0147s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0138s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0098s ]
+SQL: SELECT * FROM `ypyh_terms` WHERE `term_id` = 0 LIMIT 1   [ RunTime:0.0092s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0095s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0125s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008129s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2017-08-21T22:27:50+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000888s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001211s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001018s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001160s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000239s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002635s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000426s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0327s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0347s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0163s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0160s ]
+SQL: INSERT INTO `ypyh_posts` (`post_title`,`post_keywords`,`post_source`,`post_excerpt`,`post_date`,`post_status`,`istop`,`recommended`,`post_content`,`post_modified`,`post_author`,`smeta`) VALUES ('日常之中，嗅得艺味。 ','日常之中，嗅得艺味。 ','日常之中，嗅得艺味。 ','日常之中，嗅得艺味。 ','2017-08-21 22:24:22','1','1','1','<p><a target=\"_blank\" href=\"https://baike.baidu.com/item/%E8%A1%8C%E4%B8%BA%E8%89%BA%E6%9C%AF%E6%B4%BB%E9%9B%95%E5%A1%91\" style=\"color: rgb(19, 110, 194); text-decoration-line: none; font-family: arial, 宋体, sans-serif; font-size: 14px; text-indent: 28px; white-space: normal; background-color: rgb(255, 255, 255);\">行为艺术活雕塑</a><span style=\"color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; text-indent: 28px; background-color: rgb(255, 255, 255);\">是</span><a target=\"_blank\" href=\"https://baike.baidu.com/item/%E8%A1%8C%E4%B8%BA%E8%89%BA%E6%9C%AF/13844252\" data-lemmaid=\"13844252\" style=\"color: rgb(19, 110, 194); text-decoration-line: none; font-family: arial, 宋体, sans-serif; font-size: 14px; text-indent: 28px; white-space: normal; background-color: rgb(255, 255, 255);\">行为艺术</a><span style=\"color: rgb(51, 51, 51); font-family: arial, 宋体, sans-serif; font-size: 14px; text-indent: 28px; background-color: rgb(255, 255, 255);\">的一个支派，起源于西方国家，通过真人涂绘，达到雕塑的逼真效果，配以肢体语言，向人们展示其艺术内涵。它借鉴了纯雕塑艺术风格，但又不同于纯雕塑，优点是取之于生活，展示于真实，每个人物造型及群体组合都代表着一种文化，灵活生动地展示出不同时代所具有的社会风貌。</span></p><p><img src=\"/data/upload/ueditor/20170821/599aeddba1e59.jpeg\" style=\"\" title=\"timg (1).jpeg\"/></p><p><img src=\"/data/upload/ueditor/20170821/599aeddba4452.jpeg\" style=\"\" title=\"timg.jpeg\"/></p><p><br/></p>','2017-08-21 22:27:50','1','{\"thumb\":\"portal\\/20170821\\/599aedbaadae9.jpeg\",\"template\":\"\",\"photo\":[{\"url\":\"portal\\/20170821\\/599aedc8962f5.jpeg\",\"alt\":\"timg (1).jpeg\"}]}') [ RunTime:0.0114s ]
+SQL: INSERT INTO `ypyh_term_relationships` (`term_id`,`object_id`) VALUES ('1','1') [ RunTime:0.0088s ]
+
+[ 2017-08-21T22:28:09+08:00 ] 127.0.0.1 /index.php?g=&m=AdminPost&a=add&term=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000909s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000449s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001290s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000404s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0141s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.7774s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0116s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.2327s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.2406s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:13.9303s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0078s ]
+SQL: SELECT * FROM `ypyh_terms` WHERE `term_id` = 0 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0087s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.6649s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012709s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012768s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000122s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000114s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000374s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000411s ]
+
+[ 2017-08-21T22:28:09+08:00 ] 127.0.0.1 /index.php?g=Portal&m=AdminPost&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.001463s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000378s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000423s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0364s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0462s ]
+SQL: SHOW COLUMNS FROM `ypyh_posts` [ RunTime:0.0317s ]
+SQL: SHOW COLUMNS FROM `ypyh_terms` [ RunTime:0.0342s ]
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0315s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_posts a WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT a.*,c.user_login,c.user_nicename FROM ypyh_posts a INNER JOIN ypyh_users c ON a.post_author = c.id  WHERE `post_status` <> 3 AND ( `post_type` = 1 OR `post_type` IS NULL ) ORDER BY a.post_date DESC LIMIT 0,20   [ RunTime:0.0603s ]
+SQL: SELECT * FROM `ypyh_terms` ORDER BY `listorder` asc  [ RunTime:0.0159s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0401s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011656s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000105s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000533s ]
+
+[ 2017-08-21T22:28:09+08:00 ] 127.0.0.1 /index.php?g=Portal&m=Api&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000706s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000981s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000475s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000119s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001002s ]
+NOTIC: [2] Missing argument 1 for sp_sql_posts_paged(), called in /Users/zhibiao/www/ypyh/application/Portal/Controller/ApiController.class.php on line 13 and defined /Users/zhibiao/www/ypyh/application/Portal/Common/function.php 第 95 行.
+NOTIC: [8] Undefined variable: tag /Users/zhibiao/www/ypyh/application/Portal/Common/function.php 第 96 行.
+SQL: SHOW COLUMNS FROM `ypyh_term_relationships` [ RunTime:0.0186s ]
+SQL: SELECT COUNT(*) AS tp_count FROM ypyh_term_relationships term_relationships INNER JOIN ypyh_posts as posts on term_relationships.object_id = posts.id INNER JOIN ypyh_users as users on posts.post_author = users.id  WHERE term_relationships.status = 1 AND posts.post_status = 1 LIMIT 1   [ RunTime:0.0164s ]
+SQL: SELECT * FROM ypyh_term_relationships term_relationships INNER JOIN ypyh_posts as posts on term_relationships.object_id = posts.id INNER JOIN ypyh_users as users on posts.post_author = users.id  WHERE term_relationships.status = 1 AND posts.post_status = 1 ORDER BY post_date DESC LIMIT 0,20   [ RunTime:0.0360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000455s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000523s ]
+
