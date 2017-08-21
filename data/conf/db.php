@@ -4,10 +4,10 @@
  */
 return array(
     'DB_TYPE' => 'mysql',
-    'DB_HOST' => 'localhost',
+    'DB_HOST' => '39.108.125.83',
     'DB_NAME' => 'ypyh',
-    'DB_USER' => 'root',
-    'DB_PWD' => '123456',
+    'DB_USER' => 'ypys',
+    'DB_PWD' => 'YPys2017',
     'DB_PORT' => '3306',
     'DB_PREFIX' => 'ypyh_',
     //密钥
