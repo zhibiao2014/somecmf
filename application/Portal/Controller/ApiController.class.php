@@ -1,8 +1,8 @@
 <?php
-namespace Api\Controller;
+namespace Portal\Controller;
 use Think\Controller;
 
-class IndexController extends Controller{
+class ApiController extends Controller{
 	
 	public function _initialize() {
 
@@ -10,7 +10,6 @@ class IndexController extends Controller{
 	
 	// 接口
 	public function index(){
-		echo "string";
-		
+		var_dump(sp_sql_posts_paged());
 	}
 }
