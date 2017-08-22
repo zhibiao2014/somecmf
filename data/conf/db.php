@@ -4,6 +4,7 @@
  */
 return array(
     'DB_TYPE' => 'mysql',
+    // 'DB_HOST' => 'localhost',
     'DB_HOST' => '39.108.125.83',
     'DB_NAME' => 'ypyh',
     'DB_USER' => 'ypys',

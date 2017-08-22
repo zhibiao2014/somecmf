@@ -167,6 +167,10 @@ right: initial !important;}
 					<?php if(APP_DEBUG): ?><a class="btn btn-small" href="javascript:openapp('<?php echo U('admin/menu/index');?>','index_menu','<?php echo L('ADMIN_MENU_INDEX');?>');" title="<?php echo L('ADMIN_MENU_INDEX');?>">
 						<i class="fa fa-list"></i>
 					</a><?php endif; ?>
+
+					<a class="btn btn-small" href="/portal/api/index" title="<?php echo L('ADMIN_API_URL');?>" target="_blank">
+						<i class="fa fa-expand"></i>
+					</a>
 				</div>
 				<ul class="nav simplewind-nav pull-right">
 					<li class="light-blue">
