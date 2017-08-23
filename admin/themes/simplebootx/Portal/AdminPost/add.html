@@ -13,6 +13,14 @@
 		<a href="javascript:(function(){$('#savedimage{id}').remove();})();">移除</a>
 	</li>
 </script>
+<script type="text/html" id="photos-item-wrapper1">
+	<li id="savedimage{id}">
+		<input id="photo-{id}" type="hidden" name="videos_url[]" value="{filepath}"> 
+		<input id="photo-{id}-name" type="text" name="videos_alt[]" value="{name}" style="width: 160px;" title="视频名称">
+		<a href="javascript:upload_multi_file('视频上传','#photo-{id}','photos-item-wrapper1','video');">替换</a>
+		<a href="javascript:(function(){$('#savedimage{id}').remove();})();">移除</a>
+	</li>
+</script>
 </head>
 <body>
 	<div class="wrap js-check-wrap">
@@ -63,6 +71,13 @@
 							<td>
 								<ul id="photos" class="pic-list unstyled"></ul>
 								<a href="javascript:upload_multi_image('图片上传','#photos','photos-item-wrapper');" class="btn btn-small">选择图片</a>
+							</td>
+						</tr>
+						<tr>
+							<th>视频</th>
+							<td>
+								<ul id="file" class="pic-list unstyled"></ul>
+								<a href="javascript:upload_multi_file('视频上传','#file','photos-item-wrapper1','video');" class="btn btn-small">选择视频</a>
 							</td>
 						</tr>
 					</table>
