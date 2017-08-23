@@ -1,0 +1,150 @@
+[ 2017-08-23T19:49:52+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Setting&a=clearcache
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000854s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001125s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001930s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000887s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.001019s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0147s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0073s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0074s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000364s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001207s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000827s ]
+
+[ 2017-08-23T19:49:54+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Storage&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+SQL: SHOW COLUMNS FROM `ypyh_plugins` [ RunTime:0.0080s ]
+SQL: SELECT `name`,`hooks` FROM `ypyh_plugins` WHERE ( status=1 )  [ RunTime:0.0132s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.067451s ]
+INFO: [ app_init ] --END-- [ RunTime:0.067940s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000627s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000653s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000771s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0366s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0153s ]
+SQL: SELECT * FROM `ypyh_options` WHERE ( option_name='cmf_settings' ) LIMIT 1   [ RunTime:0.0062s ]
+NOTIC: [8] Undefined index: storage /Users/zhibiao/www/ypyh/application/Common/Common/function.php 第 385 行.
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0078s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+NOTIC: [8] Undefined variable: type /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 58 行.
+NOTIC: [8] Undefined variable: type /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 58 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 71 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 77 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 83 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 96 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 106 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 112 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000738s ]
+
+[ 2017-08-23T19:49:57+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Storage&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000848s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000531s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000504s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: storage /Users/zhibiao/www/ypyh/application/Common/Common/function.php 第 385 行.
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0114s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0079s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000225s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000442s ]
+NOTIC: [8] Undefined variable: type /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 58 行.
+NOTIC: [8] Undefined variable: type /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 58 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 71 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 77 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 83 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 96 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 106 行.
+NOTIC: [8] Undefined variable: Qiniu /Users/zhibiao/www/ypyh/data/runtime/Cache/Admin/6b0b8ae1a82f764dcf016a5241a98fb5.php 第 112 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022699s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000998s ]
+
+[ 2017-08-23T19:49:58+08:00 ] 127.0.0.1 /index.php?g=Admin&m=Setting&a=site
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: Run Common\Behavior\InitHookBehavior [ RunTime:0.000857s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000609s ]
+INFO: Run Common\Behavior\UrldecodeGetBehavior [ RunTime:0.000118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001245s ]
+INFO: [ admin_begin ] --START--
+INFO: Run Common\Behavior\AdminDefaultLangBehavior [ RunTime:0.000630s ]
+INFO: [ admin_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SHOW COLUMNS FROM `ypyh_users` [ RunTime:0.0113s ]
+SQL: SELECT * FROM `ypyh_users` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0144s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ypyh_options` WHERE ( option_name='site_options' ) LIMIT 1   [ RunTime:0.0081s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE ( option_name='cmf_settings' ) LIMIT 1   [ RunTime:0.0089s ]
+SQL: SHOW COLUMNS FROM `ypyh_options` [ RunTime:0.0152s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0074s ]
+SQL: SELECT `option_value` FROM `ypyh_options` WHERE `option_name` = 'cdn_settings' LIMIT 1   [ RunTime:0.0148s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014641s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: Run Common\Behavior\TmplStripSpaceBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002324s ]
+
