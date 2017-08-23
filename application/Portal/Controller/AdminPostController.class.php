@@ -53,6 +53,12 @@ class AdminPostController extends AdminbaseController {
 					$_POST['smeta']['photo'][]=array("url"=>$photourl,"alt"=>$_POST['photos_alt'][$key]);
 				}
 			}
+			if(!empty($_POST['videos_alt']) && !empty($_POST['videos_url'])){
+			    foreach ($_POST['photos_url'] as $key=>$url){
+			        $photourl=sp_asset_relative_url($url);
+			        $_POST['smeta']['photo'][]=array("url"=>$photourl,"alt"=>$_POST['photos_alt'][$key]);
+			    }
+			}
 			$_POST['smeta']['thumb'] = sp_asset_relative_url($_POST['smeta']['thumb']);
 			 
 			$_POST['post']['post_modified']=date("Y-m-d H:i:s",time());

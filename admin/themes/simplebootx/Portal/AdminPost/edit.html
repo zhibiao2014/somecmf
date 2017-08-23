@@ -13,6 +13,14 @@
 		<a href="javascript:(function(){$('#savedimage{id}').remove();})();">移除</a>
 	</li>
 </script>
+<script type="text/html" id="photos-item-wrapper1">
+	<li id="savedimage{id}">
+		<input id="photo-{id}" type="hidden" name="videos_url[]" value="{filepath}"> 
+		<input id="photo-{id}-name" type="text" name="videos_alt[]" value="{name}" style="width: 160px;" title="视频名称">
+		<a href="javascript:upload_multi_file('视频上传','#photo-{id}','photos-item-wrapper1','video');">替换</a>
+		<a href="javascript:(function(){$('#savedimage{id}').remove();})();">移除</a>
+	</li>
+</script>
 </head>
 <body>
 	<div class="wrap js-check-wrap">
@@ -40,32 +48,32 @@
 								<span class="form-required">*</span>
 							</td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<th>关键词</th>
 							<td>
 								<input type="text" name="post[post_keywords]" style="width: 400px" value="{$post['post_keywords']}" placeholder="请输入关键字">
 								多关键词之间用空格或者英文逗号隔开
 							</td>
-						</tr>
+						</tr> -->
 	
-						<tr>
+						<!-- <tr>
 							<th>文章来源</th>
 							<td>
 								<input type="text" name="post[post_source]" value="{$post['post_source']}" style="width: 400px" placeholder="请输入文章来源">
 							</td>
-						</tr>
+						</tr> -->
 						<tr>
-							<th>摘要</th>
+							<th>一句话简介</th>
 							<td>
 								<textarea name="post[post_excerpt]" style="width: 98%; height: 50px;" placeholder="请填写摘要">{$post.post_excerpt}</textarea>
 							</td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<th>内容</th>
 							<td>
 								<script type="text/plain" id="content" name="post[post_content]">{$post.post_content}</script>
 							</td>
-						</tr>
+						</tr> -->
 						<tr>
 							<th>相册图集</th>
 							<td>
@@ -84,6 +92,13 @@
 									</notempty>
 								</ul>
 								<a href="javascript:upload_multi_image('图片上传','#photos','photos-item-wrapper');" class="btn btn-small">选择图片</a>
+							</td>
+						</tr>
+						<tr>
+							<th>视频</th>
+							<td>
+								<ul id="files" class="pic-list unstyled"></ul>
+								<a href="javascript:upload_multi_file('视频上传','#files','photos-item-wrapper1','video');" class="btn btn-small">选择视频</a>
 							</td>
 						</tr>
 					</table>
@@ -150,7 +165,7 @@
 								<label class="radio"><input type="radio" name="post[recommended]" value="0" {$recommended_no}>未推荐</label>
 							</td>
 						</tr>
-						<tr>
+						<!-- <tr>
 							<th>文章模板</th>
 						</tr>
 						<tr>
@@ -167,7 +182,7 @@
 									</foreach>
 								</select>
 							</td>
-						</tr>
+						</tr> -->
 					</table>
 				</div>
 			</div>
