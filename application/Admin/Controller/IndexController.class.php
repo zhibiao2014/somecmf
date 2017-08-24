@@ -21,6 +21,15 @@ class IndexController extends AdminbaseController {
         $this->load_menu_lang();
     	
         $this->assign("menus", D("Common/Menu")->menu_json());
+        
+        C(S('sp_dynamic_config'));//加载动态配置
+        $this->options_model = D("Common/Options");
+        $option=$this->options_model->where("option_name='site_options'")->find();
+        if($option){
+            $this->assign(json_decode($option['option_value'],true));
+            $this->assign("option_id",$option['option_id']);
+        }
+        
        	$this->display();
     }
     

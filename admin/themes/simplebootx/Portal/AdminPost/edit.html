@@ -63,17 +63,17 @@
 							</td>
 						</tr> -->
 						<tr>
-							<th>一句话简介</th>
+							<th>一句话亮点</th>
 							<td>
-								<textarea name="post[post_excerpt]" style="width: 98%; height: 50px;" placeholder="请填写摘要">{$post.post_excerpt}</textarea>
+								<textarea name="post[post_excerpt]" style="width: 98%; height: 50px;" placeholder="请填写亮点">{$post.post_excerpt}</textarea>
 							</td>
 						</tr>
-						<!-- <tr>
+						<tr>
 							<th>内容</th>
 							<td>
 								<script type="text/plain" id="content" name="post[post_content]">{$post.post_content}</script>
 							</td>
-						</tr> -->
+						</tr>
 						<tr>
 							<th>相册图集</th>
 							<td>
@@ -98,6 +98,18 @@
 							<th>视频</th>
 							<td>
 								<ul id="files" class="pic-list unstyled"></ul>
+									<notempty name="smeta['video']">
+										<foreach name="smeta['video']" item="vo">
+										<php>$vid_url=sp_get_image_preview_url($vo['url']);</php>
+										<li id="savedvideo{$key}">
+											<input id="video-{$key}" type="hidden" name="videos_url[]" value="{$vid_url}"> 
+											<input id="video-{id}-name" type="text" name="videos_alt[]" value="{$vo.alt}" style="width: 200px;" title="视频名称">
+											<a href="javascript:upload_one('视频上传','#video-{$key}','video');">替换</a>
+											<a href="javascript:(function(){ $('#savedvideo{$key}').remove();})();">移除</a>
+										</li>
+										</foreach>
+									</notempty>
+								</ul>
 								<a href="javascript:upload_multi_file('视频上传','#files','photos-item-wrapper1','video');" class="btn btn-small">选择视频</a>
 							</td>
 						</tr>

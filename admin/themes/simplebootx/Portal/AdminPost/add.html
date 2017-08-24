@@ -14,11 +14,11 @@
 	</li>
 </script>
 <script type="text/html" id="photos-item-wrapper1">
-	<li id="savedimage{id}">
-		<input id="photo-{id}" type="hidden" name="videos_url[]" value="{filepath}"> 
-		<input id="photo-{id}-name" type="text" name="videos_alt[]" value="{name}" style="width: 160px;" title="视频名称">
-		<a href="javascript:upload_multi_file('视频上传','#photo-{id}','photos-item-wrapper1','video');">替换</a>
-		<a href="javascript:(function(){$('#savedimage{id}').remove();})();">移除</a>
+	<li id="savedvideo{id}">
+		<input id="video-{id}" type="hidden" name="videos_url[]" value="{filepath}"> 
+		<input id="video-{id}-name" type="text" name="videos_alt[]" value="{name}" style="width: 160px;" title="视频名称">
+		<a href="javascript:upload_multi_file('视频上传','#video-{id}','photos-item-wrapper1','video');">替换</a>
+		<a href="javascript:(function(){$('#savedvideo{id}').remove();})();">移除</a>
 	</li>
 </script>
 </head>
@@ -55,17 +55,17 @@
 							<td><input type="text" name="post[post_source]" id="source" value="" style="width: 400px" placeholder="请输入文章来源"></td>
 						</tr> -->
 						<tr>
-							<th>一句话简介</th>
+							<th>一句话亮点</th>
 							<td>
-								<textarea name="post[post_excerpt]" id="description" style="width: 98%; height: 50px;" placeholder="请填写摘要"></textarea>
+								<textarea name="post[post_excerpt]" id="description" style="width: 98%; height: 50px;" placeholder="请填写亮点"></textarea>
 							</td>
 						</tr>
-						<!-- <tr>
+						<tr>
 							<th>内容</th>
 							<td>
 								<script type="text/plain" id="content" name="post[post_content]"></script>
 							</td>
-						</tr> -->
+						</tr>
 						<tr>
 							<th>相册图集</th>
 							<td>

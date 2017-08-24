@@ -54,9 +54,9 @@ class AdminPostController extends AdminbaseController {
 				}
 			}
 			if(!empty($_POST['videos_alt']) && !empty($_POST['videos_url'])){
-			    foreach ($_POST['photos_url'] as $key=>$url){
-			        $photourl=sp_asset_relative_url($url);
-			        $_POST['smeta']['photo'][]=array("url"=>$photourl,"alt"=>$_POST['photos_alt'][$key]);
+			    foreach ($_POST['videos_url'] as $key=>$url){
+			        $videosurl=sp_asset_relative_url($url);
+			        $_POST['smeta']['video'][]=array("url"=>$videosurl,"alt"=>$_POST['videos_alt'][$key]);
 			    }
 			}
 			$_POST['smeta']['thumb'] = sp_asset_relative_url($_POST['smeta']['thumb']);
@@ -118,6 +118,12 @@ class AdminPostController extends AdminbaseController {
 					$photourl=sp_asset_relative_url($url);
 					$_POST['smeta']['photo'][]=array("url"=>$photourl,"alt"=>$_POST['photos_alt'][$key]);
 				}
+			}
+			if(!empty($_POST['videos_alt']) && !empty($_POST['videos_url'])){
+			    foreach ($_POST['videos_url'] as $key=>$url){
+			        $videosurl=sp_asset_relative_url($url);
+			        $_POST['smeta']['video'][]=array("url"=>$videosurl,"alt"=>$_POST['videos_alt'][$key]);
+			    }
 			}
 			$_POST['smeta']['thumb'] = sp_asset_relative_url($_POST['smeta']['thumb']);
 			unset($_POST['post']['post_author']);
