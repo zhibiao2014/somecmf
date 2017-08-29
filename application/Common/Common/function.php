@@ -2162,3 +2162,26 @@ function sp_mobile_code_log($mobile,$code,$expire_time){
     
     return $result;
 }
+//输出接口数据
+function output($data)
+{
+    header("Content-Type:text/html; charset=utf-8");
+    $r_type = intval($_REQUEST['i_type']);//返回数据格式类型; 0:base64;1;json_encode;2:array
+    if ($r_type == 0)
+    {
+        echo base64_encode(json_encode($data));
+    }else if ($r_type == 1)
+    {
+        print_r(json_encode($data));
+    }else if ($r_type == 2)
+    {
+        print_r($data);
+    }else if($r_type == 4){
+        $aes = new \CryptAES();
+        $aes->set_key('FANWE5LMUQC43P2P');
+        $aes->require_pkcs5();
+        $encText = $aes->encrypt(json_encode($data));
+        echo $encText;
+    };
+    exit;
+}

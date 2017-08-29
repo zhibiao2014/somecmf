@@ -30,12 +30,7 @@ class ApiController extends ApibaseController{
     	        'data' => $data
     	    );
     	}
-    	if ($_REQUEST['i_type']==1)
-    	{
-    	    echo json_encode($root);
-    	}else{
-    	    echo $root;
-    	}
+    	output($root);
     }
 	//注册接口7
 	public function regist(){
