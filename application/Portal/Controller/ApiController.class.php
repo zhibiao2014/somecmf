@@ -49,7 +49,7 @@ class ApiController extends ApibaseController{
 	        $root['message']="注册方式不存在！";
 	        $root['code']=701;
 	    }
-	    echo json_encode($root);
+	    output($root);
 	}
 	
 	private function _do_mobile_register(){
