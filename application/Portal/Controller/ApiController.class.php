@@ -10,26 +10,33 @@ class ApiController extends ApibaseController{
 	
 	// 首页接口6
 	public function index(){
-		$data=sp_sql_posts_paged("field:post_title,post_excerpt,post_content,post_date,smeta;limit:0,8;order:post_date desc,listorder desc;")['posts'];
-		foreach ($data as $k => $v) {
-			$data[$k]['thumb']=json_decode($v['smeta'],true)['thumb'];
-			$data[$k]['photo']=json_decode($v['smeta'],true)['photo'];
-			$data[$k]['video']=json_decode($v['smeta'],true)['video'];
-			unset($data[$k]['smeta']);
-		}
-		$root=array(
-		    'code' => 200,
-		    'message' => "信息请求成功",
-		    'data' => $data
-		);
-		if ($_REQUEST['i_type']==1)
-		{
-		    echo json_encode($root);
-		}else{
-		    echo $root;
-		}
-		
-	}
+	    if(IS_GET){
+    		$data=sp_sql_posts_paged("field:post_title,post_excerpt,post_content,post_date,smeta;limit:0,8;order:post_date desc,listorder desc;")['posts'];
+    		foreach ($data as $k => $v) {
+    			$data[$k]['thumb']=json_decode($v['smeta'],true)['thumb'];
+    			$data[$k]['photo']=json_decode($v['smeta'],true)['photo'];
+    			$data[$k]['video']=json_decode($v['smeta'],true)['video'];
+    			unset($data[$k]['smeta']);
+    		}
+    		$root=array(
+    		    'code' => 200,
+    		    'message' => "信息请求成功",
+    		    'data' => $data
+    		);
+    	}else{
+    	    $root=array(
+    	        'code' => 500,
+    	        'message' => "请求类型错误",
+    	        'data' => $data
+    	    );
+    	}
+    	if ($_REQUEST['i_type']==1)
+    	{
+    	    echo json_encode($root);
+    	}else{
+    	    echo $root;
+    	}
+    }
 	//注册接口7
 	public function regist(){
 	    $root=array(
