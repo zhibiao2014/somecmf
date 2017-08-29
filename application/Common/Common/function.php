@@ -2177,7 +2177,7 @@ function output($data)
     {
         print_r($data);
     }else if($r_type == 4){
-        $aes = new \CryptAES();
+        $aes = new \think\Crypt();
         $aes->set_key('FANWE5LMUQC43P2P');
         $aes->require_pkcs5();
         $encText = $aes->encrypt(json_encode($data));
