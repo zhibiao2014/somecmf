@@ -2162,8 +2162,25 @@ function sp_mobile_code_log($mobile,$code,$expire_time){
     
     return $result;
 }
+/*
+ * 数据加密验签函数
+ */
+function doHmacMd5($data, $key) {
+    $b = 64; // byte length for md5
+    if (strlen($key) > $b) {
+        $key = pack("H*", md5($key));
+    }
+    $key = str_pad($key, $b, chr(0x00));
+    $ipad = str_pad('', $b, chr(0x36));
+    $opad = str_pad('', $b, chr(0x5c));
+    $k_ipad = $key ^ $ipad;
+    $k_opad = $key ^ $opad;
+
+    return md5($k_opad . pack("H*", md5($k_ipad . $data)));
+}
+
 //输出接口数据
-function output($data)
+function output($data,$site_crypt="ypyh")
 {
     header("Content-Type:text/html; charset=utf-8");
     $r_type = intval($_REQUEST['i_type']);//返回数据格式类型; 0:base64;1;json_encode;2:array
@@ -2178,7 +2195,7 @@ function output($data)
         print_r($data);
     }else if($r_type == 4){
         $aes = new \CryptAES();
-        $aes->set_key('FANWE5LMUQC43P2P');
+        $aes->set_key($site_crypt);
         $aes->require_pkcs5();
         $encText = $aes->encrypt(json_encode($data));
         echo $encText;
