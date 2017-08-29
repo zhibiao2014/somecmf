@@ -1,6 +1,6 @@
 <?php
 
-class Crypt
+class CryptAES
 
 {
 
