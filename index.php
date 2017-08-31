@@ -1,7 +1,6 @@
 <?php
 /**
  * 入口文件
- * Some rights reserved：www.thinkcmf.com
  */
 // echo phpinfo();exit();
 if (ini_get('magic_quotes_gpc')) {
@@ -38,7 +37,7 @@ define("HTML_PATH", SITE_PATH . "data/runtime/Html/");
 define("THINKCMF_VERSION", 'X2.2.3');
 
 define("THINKCMF_CORE_TAGLIBS", 'cx,Common\Lib\Taglib\TagLibSpadmin,Common\Lib\Taglib\TagLibHome');
-
+$rr=RUNTIME_PATH;
 if(function_exists('saeAutoLoader') || isset($_SERVER['HTTP_BAE_ENV_APPID'])){
 	
 }else{
